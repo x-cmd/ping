@@ -2,8 +2,8 @@ id: x-2-measurement-02-jitter-and-distribution
 
 data:
   - name:
-      en: Jitter and distribution
-      cn: 抖动与分布
+      en: Jitter, loss, and the shape of the distribution
+      cn: 抖动、丢包与分布的形状
     qa:
       - id: why-loss-matters
         question:
@@ -11,9 +11,9 @@ data:
       cn: 为什么丢包率要和时延分开讲？
         answer:
           en: >
-            Because silent loss is the failure mode a latency average hides completely. In the 18-probe measurement, one probe (netcup, Nuremberg) had 100% packet loss and simply never answered — it is not "down", and it contributes nothing to an average. Only an explicit loss figure surfaces it.
+            Because silent loss is the failure mode a latency average hides completely. In the 18-probe measurement, one probe (netcup, Nuremberg) had 100% packet loss and simply never answered — it is not "down", and it contributes nothing to any average. Only an explicit loss figure surfaces it. That is why Globalping returns stats.loss next to stats.avg, and why loss belongs in its own series in any reachability measurement.
           cn: >
-            因为静默丢包正是时延均值完全掩盖掉的故障模式。那次 18 探针测量里，有一个探针（Nuremberg 的 netcup）100% 丢包、从来不回包——它并没有「宕机」，对均值也没有任何贡献。只有把丢包率单独列出来，才看得见它。
+            因为静默丢包正是时延均值完全掩盖掉的故障模式。那次 18 探针测量里，有一个探针（Nuremberg 的 netcup）100% 丢包、从来不回包——它并没有「宕机」，对均值也没有任何贡献。只有把丢包率单独列出来，才看得见它。这就是 Globalping 在 stats.avg 之外还返回 stats.loss 的原因，也是任何可达性测量都该把丢包率单列一列的原因。
         confidence: 10
         reference:
           - docs/2-measurement/02-jitter-and-distribution/en.md
