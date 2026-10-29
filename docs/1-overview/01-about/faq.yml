@@ -2,13 +2,13 @@ id: x-1-overview-01-about
 
 data:
   - name:
-      en: Why one ping is not enough
-      cn: 为什么一次 ping 不够
+      en: "Why one ping is not enough"
+      cn: "为什么一次 ping 不够"
     qa:
       - id: why-many-probes
         question:
-      en: Why measure from many probes instead of just my own machine?
-      cn: 为什么要从多个探针测，而不是只从自己机器测？
+          en: "Why measure from many probes instead of just my own machine?"
+          cn: "为什么要从多个探针测，而不是只从自己机器测？"
         answer:
           en: >
             Because one vantage point tells you one thing: how far your network is from the target. From Frankfurt, 1.1.1.1 answered in under 1 ms; from Buffalo the same second answered in 12 ms. Both were true at the same moment. Only a multi-probe measurement separates "it is slow here" from "it is slow everywhere" — and it changes what the data is a sample of, from one path out of many to the distribution of paths.
