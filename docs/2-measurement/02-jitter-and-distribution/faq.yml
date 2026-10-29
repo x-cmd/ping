@@ -1,0 +1,20 @@
+id: x-2-measurement-02-jitter-and-distribution
+
+data:
+  - name:
+      en: Jitter and distribution
+      cn: 抖动与分布
+    qa:
+      - id: why-loss-matters
+        question:
+      en: Why show packet loss separately from latency?
+      cn: 为什么丢包率要和时延分开讲？
+        answer:
+          en: >
+            Because silent loss is the failure mode a latency average hides completely. In the 18-probe measurement, one probe (netcup, Nuremberg) had 100% packet loss and simply never answered — it is not "down", and it contributes nothing to an average. Only an explicit loss figure surfaces it.
+          cn: >
+            因为静默丢包正是时延均值完全掩盖掉的故障模式。那次 18 探针测量里，有一个探针（Nuremberg 的 netcup）100% 丢包、从来不回包——它并没有「宕机」，对均值也没有任何贡献。只有把丢包率单独列出来，才看得见它。
+        confidence: 10
+        reference:
+          - docs/2-measurement/02-jitter-and-distribution/en.md
+          - docs/2-measurement/02-jitter-and-distribution/cn.md
