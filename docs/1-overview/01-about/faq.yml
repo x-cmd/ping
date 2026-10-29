@@ -1,0 +1,20 @@
+id: x-1-overview-01-about
+
+data:
+  - name:
+      en: About this page
+      cn: 关于本页
+    qa:
+      - id: what-is-this
+        question:
+      en: What is this page?
+      cn: 这个页面是什么？
+        answer:
+          en: >
+            It is the Shodan query facets, rendered as pictures. Shodan already lets you break any search down by 39 dimensions — country, port, ASN, OS, TLS fingerprint, SSH key, CVE, WAF and more. Those breakdowns come back as JSON, and JSON in an issue or a blog post is something people scroll past. Every figure here is the same breakdown, rendered, with the query left editable in the URL.
+          cn: >
+            这是把 Shodan 的查询 facet 渲染成了图。Shodan 本来就能把任意一次搜索按 39 个维度拆开——国家、端口、ASN、操作系统、TLS 指纹、SSH 密钥、CVE、WAF 等等。这些分解结果是 JSON，而 JSON 放进 issue 或博客里，别人只会划过去。这里的每一张图都是同样的分解，只是渲染出来了，而且查询在 URL 里保持可编辑。
+        confidence: 10
+        reference:
+          - docs/1-overview/01-about/en.md
+          - docs/1-overview/01-about/cn.md
