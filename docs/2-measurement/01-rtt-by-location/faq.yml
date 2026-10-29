@@ -1,0 +1,20 @@
+id: x-2-measurement-01-rtt-by-location
+
+data:
+  - name:
+      en: "Round-trip time, by probe"
+      cn: "按探针看往返时延"
+    qa:
+      - id: why-is-buffalo-slow
+        question:
+          en: "Why is Buffalo 12 ms when Tokyo is 1.3 ms?"
+          cn: "为什么布法罗 12 ms 而东京只有 1.3 ms？"
+        answer:
+          en: >
+            1.1.1.1 is anycast, so the measurement is really "distance to the nearest Cloudflare point". Buffalo's HostPapa network lands on a Cloudflare edge that is simply far away — a routing and peering fact, not a property of the target. Geography does not explain it either: Falkenstein and Nuremberg sit at 4–6 ms while Frankfurt, a couple of hundred kilometres away, is under 1 ms. The gap between German cities is peering, not distance.
+          cn: >
+            1.1.1.1 是 anycast，所以实际测的是「到最近 Cloudflare 节点的物理距离」。布法罗的 HostPapa 网络恰好落在了一个很远的 Cloudflare 边缘节点上——这是路由与互联的事实，跟目标本身无关。地理也解释不了：Falkenstein 和 Nuremberg 在 4–6 ms，而几百公里外的法兰克福不到 1 ms。德国这几座城市之间的差距来自互联，不是距离。
+        confidence: 10
+        reference:
+          - docs/2-measurement/01-rtt-by-location/en.md
+          - docs/2-measurement/01-rtt-by-location/cn.md
