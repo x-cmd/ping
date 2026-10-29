@@ -2,13 +2,13 @@ id: x-2-measurement-02-jitter-and-distribution
 
 data:
   - name:
-      en: Jitter, loss, and the shape of the distribution
-      cn: 抖动、丢包与分布的形状
+      en: "Jitter, loss, and the shape of the distribution"
+      cn: "抖动、丢包与分布的形状"
     qa:
       - id: why-loss-matters
         question:
-      en: Why show packet loss separately from latency?
-      cn: 为什么丢包率要和时延分开讲？
+          en: "Why show packet loss separately from latency?"
+          cn: "为什么丢包率要和时延分开讲？"
         answer:
           en: >
             Because silent loss is the failure mode a latency average hides completely. In the 18-probe measurement, one probe (netcup, Nuremberg) had 100% packet loss and simply never answered — it is not "down", and it contributes nothing to any average. Only an explicit loss figure surfaces it. That is why Globalping returns stats.loss next to stats.avg, and why loss belongs in its own series in any reachability measurement.
