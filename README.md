@@ -1,6 +1,10 @@
 # ping
 
-**Global reachability, as plain URLs.** Measure one target from hundreds of probes worldwide and the answer is a picture, not a number. Every chart below is a [x-cmd draw](https://github.com/x-cmd/draw) URL — the data lives in the link, server-rendered as SVG.
+**Global reachability, as plain URLs.**
+
+A ping from your desk measures one thing: how far *your* network is from the target. It cannot tell you whether the target is reachable from Lagos, Osaka or São Paulo — and when something is slow, that distinction decides whether the problem is yours or everyone's.
+
+This site measures from many vantage points at once, and renders the results as charts whose data lives in the URL.
 
 > Languages: English · 中文（每页双语；es / ja / de 待补）
 
@@ -16,31 +20,32 @@
 
 ## All pages
 
-### overview
+### Overview · 总览
 
 - [Why one ping is not enough](docs/1-overview/01-about/en.md)
 
-### measurement
+### Measurements · 测量
 
 - [Round-trip time, by probe](docs/2-measurement/01-rtt-by-location/en.md)
 - [Jitter, loss, and the shape of the distribution](docs/2-measurement/02-jitter-and-distribution/en.md)
 
 ## 中文页
 
-### overview
+### 总览
 
 - [为什么一次 ping 不够](docs/1-overview/01-about/cn.md)
 
-### measurement
+### 测量
 
 - [按探针看往返时延](docs/2-measurement/01-rtt-by-location/cn.md)
 - [抖动、丢包与分布的形状](docs/2-measurement/02-jitter-and-distribution/cn.md)
 
 ## How the charts work
 
-Each figure is a plain `https://x-cmd.com/draw?type=…` URL — rendered to a standalone SVG by [x-cmd/draw](https://github.com/x-cmd/draw). No JS runs on this page, the SVG is static, printable, and AI-readable: the parameters *are* the data, so the same URL can be edited to query something else.
+Every figure is a plain `https://x-cmd.com/draw?type=…` URL — rendered to a standalone SVG by [x-cmd/draw](https://github.com/x-cmd/draw). No JavaScript runs on this page; the SVG is static, printable, and AI-readable, because the parameters *are* the data.
 
-To make your own: run the CLI, then hand the output to draw — or let your AI agent do it with the [draw skill](https://raw.githubusercontent.com/x-cmd/draw/main/SKILL.md).
+To make your own: run a measurement with `x globalping`, then hand the numbers to draw — or let your AI agent do it with the [draw skill](https://raw.githubusercontent.com/x-cmd/draw/main/SKILL.md).
+
 
 ## Data sources
 
