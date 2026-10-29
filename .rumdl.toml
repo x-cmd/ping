@@ -1,0 +1,21 @@
+# rumdl config for x-cmd/ping.
+#
+# Project conventions / quirks that need suppression:
+#
+# MD036 — bold (**xxx**) is used as in-section sub-labels after H2
+#   headings (e.g. "## Reading the chart" then "**The floor is
+#   about 1 ms.**"). This idiom is intentional and not a heading.
+#
+# MD041 — top-level docs (README.md, README.cn.md) deliberately
+#   skip the H1; the title is conveyed in the H2 navigation list
+#   at the top of the file.
+#
+# MD013 — long URLs (raw.githubusercontent.com fetch URLs, delegated
+#   statistics endpoints) are common. Wrapping them makes the curl
+#   pipelines harder to copy.
+#
+# MD051 — anchors like "#how-the-charts-work" are referenced without
+#   auto-slug conversion; rumdl flags them as missing.
+
+[global]
+disable = ["MD036", "MD041", "MD013", "MD051"]
