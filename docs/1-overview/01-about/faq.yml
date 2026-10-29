@@ -2,18 +2,18 @@ id: x-1-overview-01-about
 
 data:
   - name:
-      en: About this page
-      cn: 关于本页
+      en: Why one ping is not enough
+      cn: 为什么一次 ping 不够
     qa:
-      - id: what-is-this
+      - id: why-many-probes
         question:
-      en: What is this page?
-      cn: 这个页面是什么？
+      en: Why measure from many probes instead of just my own machine?
+      cn: 为什么要从多个探针测，而不是只从自己机器测？
         answer:
           en: >
-            It is the Shodan query facets, rendered as pictures. Shodan already lets you break any search down by 39 dimensions — country, port, ASN, OS, TLS fingerprint, SSH key, CVE, WAF and more. Those breakdowns come back as JSON, and JSON in an issue or a blog post is something people scroll past. Every figure here is the same breakdown, rendered, with the query left editable in the URL.
+            Because one vantage point tells you one thing: how far your network is from the target. From Frankfurt, 1.1.1.1 answered in under 1 ms; from Buffalo the same second answered in 12 ms. Both were true at the same moment. Only a multi-probe measurement separates "it is slow here" from "it is slow everywhere" — and it changes what the data is a sample of, from one path out of many to the distribution of paths.
           cn: >
-            这是把 Shodan 的查询 facet 渲染成了图。Shodan 本来就能把任意一次搜索按 39 个维度拆开——国家、端口、ASN、操作系统、TLS 指纹、SSH 密钥、CVE、WAF 等等。这些分解结果是 JSON，而 JSON 放进 issue 或博客里，别人只会划过去。这里的每一张图都是同样的分解，只是渲染出来了，而且查询在 URL 里保持可编辑。
+            因为一个观测点只能说明一件事：你的网络离目标有多远。从法兰克福测 1.1.1.1 不到 1 ms，从布法罗测同一秒是 12 ms。同一时刻两者都成立。只有多点测量才能把「我这边慢」和「大家都慢」分开 —— 它改变的是这份数据在给谁做样本：从千万条路径中的一条，变成路径的分布。
         confidence: 10
         reference:
           - docs/1-overview/01-about/en.md
