@@ -1,0 +1,26 @@
+# Website sidebar group config for this directory. Nested groups use their own _sidebar.yml.
+# @property {string} <icon> - Required. UnoCSS icon class, e.g. i-lucide:store.
+#   - Lucide icon names: curl -fsSL https://cdn.jsdelivr.net/npm/lucide-static@latest/icon-nodes.json | jq -r 'keys[]'
+# @property {Record<string, string>} <text> - Required. Localized group names (plain text).
+
+<icon>: i-lucide:activity
+<text>:
+  en: Measurement
+  zh: 测量
+  cs: Měření
+  de: Messung
+  es: Medición
+  fr: Mesure
+  id: Pengukuran
+  it: Misurazione
+  ja: 測定
+  ko: 측정
+  pl: Pomiar
+  ro: Măsurare
+  ru: Измерение
+  th: การวัด
+  tr: Ölçüm
+  uk: Вимірювання
+  vi: Đo lường
+  pt-br: Medição
+  pt-pt: Medição
